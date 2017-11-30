@@ -1,0 +1,41 @@
+/* CSS declarations go here */
+
+body {
+    background-color: #34495e;
+}
+
+.coinsList {
+    .coin {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-bottom: 1px solid #2c3e50;
+    }
+    .coinName {
+        color: #ffffff;
+        opacity: 0.8;
+    }
+}
+
+.addCoinButton {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    background: #3498db;
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    span {
+        top: -12px;
+        position: relative;
+
+    }
+}

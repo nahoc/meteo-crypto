@@ -1,0 +1,25 @@
+<template name="coinsList">
+  <div class="container">
+    <ul class="coinsList">
+      {{#each arrayify coinsList}}
+      <li class="coin">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="images/{{value.id}}.png" alt="{{value.name}}" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p class="coinName">{{value.name}}</p>
+            </div>
+          </div>
+        </article>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="addCoinButton">
+      <span>+</span>
+    </div>
+  </div>
+</template>
