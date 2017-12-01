@@ -4,16 +4,22 @@
       {{#each arrayify coinsList}}
       <li class="coin">
         <article class="media">
-          <div class="media-left">
-            <figure class="image is-64x64">
+          <!--<div class="media-left">
+            <figure class="image">
               <img src="images/{{value.id}}.png" alt="{{value.name}}" />
             </figure>
-          </div>
+          </div>-->
           <div class="media-content">
             <div class="content">
               <p class="coinName">{{value.name}}</p>
             </div>
           </div>
+          <div class="media-right">
+              <div class="content">
+                <p class="coinPrice has-text-right is-pulled-right"><sup>$</sup>{{value.price_usd}}</p>
+                <small class="coinPriceChange24h has-text-right is-pulled-right">{{value.percent_change_24h}}%</small>
+              </div>
+            </div>
         </article>
       </li>
       {{/each}}

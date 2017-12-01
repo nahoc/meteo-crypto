@@ -27,3 +27,5 @@ http
 aldeed:collection2-core
 aldeed:simple-schema
 session
+kadira:flow-router
+kadira:blaze-layout
