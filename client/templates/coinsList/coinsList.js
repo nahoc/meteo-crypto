@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
     Session.setDefault('coinsList', null);
-    Meteor.call("getCoinsList", 'https://api.coinmarketcap.com/v1/ticker/?limit=10', function (e, response) {
+    Meteor.call("getCoinsList", 'https://api.coinmarketcap.com/v1/ticker/?limit=6', function (e, response) {
         if (e) {
             console.log('Error: ' + e);
         } else {
