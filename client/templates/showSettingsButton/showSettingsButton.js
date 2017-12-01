@@ -1,8 +1,7 @@
 Template.showSettingsButton.events({
     'click .showSettingsButton'(event) {
-      // Prevent default browser form submit
-      event.preventDefault();
-  
+      $('.is-active').removeClass('is-active');
+      $('.balance').slideUp("fast");
       FlowRouter.go('/settings');
     },
   });

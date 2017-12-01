@@ -1,5 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-
 if (Meteor.isClient) {
     Session.setDefault('coinsList', null);
 
