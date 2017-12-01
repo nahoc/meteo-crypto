@@ -1,27 +1,34 @@
 <template name="portfolio">
-    <div class="container">
-        <ul class="coinsList">
-          {{#each arrayify coinsList}}
-          <li class="coin">
-            <article class="media">
-              <!--<div class="media-left">
+  <div class="container">
+    <form class="portfolioForm">
+      <ul class="coinsList">
+        {{#each arrayify coinsList}}
+        <li class="coin">
+          <article class="media">
+            <!--<div class="media-left">
                 <figure class="image">
                   <img src="images/{{value.id}}.png" alt="{{value.name}}" />
                 </figure>
               </div>-->
-              <div class="media-content">
-                <div class="content">
-                  <p class="coinName">{{value.name}}</p>
-                </div>
+            <div class="media-content">
+              <div class="content">
+                <p class="coinName">{{value.name}}</p>
               </div>
-              <div class="media-right">
-                  <div class="content">
-                      <input class="is-pulled-right has-text-right input portfolioInput" type="text" placeholder="0">
-                  </div>
-                </div>
-            </article>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+            </div>
+            <div class="media-right">
+              <div class="content">
+                {{#if coinIsOwned value.name}}
+                  <input class="is-pulled-right has-text-right input portfolioInput" type="text" value="{{coinAmount value.name}}">
+                {{else}}
+                  <input class="is-pulled-right has-text-right input portfolioInput" type="text" placeholder="0">
+                {{/if}}
+              </div>
+            </div>
+          </article>
+        </li>
+        {{/each}}
+      </ul>
+      <button type="submit" value="submit">submit</button>
+    </form>
+  </div>
 </template>
