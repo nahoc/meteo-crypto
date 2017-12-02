@@ -16,8 +16,8 @@
           </div>
           <div class="media-right">
               <div class="content">
-                <p class="coinPrice has-text-right is-pulled-right"><sup>$</sup>{{value.price_usd}}</p>
-                <small class="coinPriceChange24h has-text-right is-pulled-right">{{value.percent_change_24h}}%</small>
+                <p class="coinPrice has-text-right is-pulled-right"><sup>$</sup>{{formatCurrency value.price_usd}}</p>
+                <small class="coinPriceChange24h has-text-right is-pulled-right {{isNegative value.percent_change_24h}}">{{value.percent_change_24h}}%</small>
               </div>
             </div>
         </article>

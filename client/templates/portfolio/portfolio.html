@@ -4,11 +4,11 @@
       {{#each arrayify coinsList}}
       <li class="coin">
         <article class="media">
-          <!--<div class="media-left">
-                <figure class="image">
-                  <img src="images/{{value.id}}.png" alt="{{value.name}}" />
-                </figure>
-              </div>-->
+          <div class="media-left">
+            <figure class="image">
+              <img class="coinIcon" src="images/{{value.symbol}}.svg" alt="{{value.name}}" />
+            </figure>
+          </div>
           <div class="media-content">
             <div class="content">
               <p class="coinName">{{value.name}}</p>

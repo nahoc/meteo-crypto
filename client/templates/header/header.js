@@ -4,10 +4,10 @@ Template.header.events({
     $('.is-active').removeClass('is-active');
     $(target).parent('li').addClass('is-active');
     FlowRouter.go('/' + target.id);
-    $('.balance').slideUp("fast");
+    $('.balance').slideUp(220);
   },
 
   'click .toggle-balance'(event) { 
-    $('.balance').slideDown("fast");
+    $('.balance').slideDown(220);
   },
 });
