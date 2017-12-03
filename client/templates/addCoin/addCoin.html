@@ -1,7 +1,12 @@
 <template name="addCoin">
     <div class="addCoin">
         <div class="container">
-            <input class="input addCoinInput" type="text" value="" placeholder="Search coin">
+            {{#if showAutocomplete}}
+               {{> inputAutocomplete settings=settings id="addCoinInput" class="input addCoinInput" placeholder="Search coin"}}
+            {{else}}
+                Checking...   // You can also show a spinner image or GIF here
+            {{/if}}
+            <!--<input class="input addCoinInput" type="text" value="" placeholder="Search coin">-->
         </div>
     </div>
 </template>

@@ -34,6 +34,10 @@ body {
     padding-bottom: 14px;
     opacity: 0;
     transition: all 0.22s ease-in-out;
+    .-autocomplete-item{
+        min-height: 240px!important;
+        color: black!important;
+    }
 }
 
 .addCoinOpened {
