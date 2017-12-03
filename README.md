@@ -5,10 +5,10 @@ Cryptomaniak is a simple mobile app to follow your favorite cryptocurrencies. Al
 ## Features
 
 * Simple market snapshot
-** Large cryptocurrencies support
-** Possibility to add and remove your favourite coins
+* - Large cryptocurrencies support
+* - Possibility to add and remove your favourite coins
 * User portfolio 
-** Exact holding value of each coin
+* - Exact holding value of each coin
 * Light and dark themes
 * Various currencies (USD, CAD, etc.)
 * Offered in French and English
