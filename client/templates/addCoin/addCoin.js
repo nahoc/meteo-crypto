@@ -1,34 +1,24 @@
-Template.addCoin.onCreated(function () {
-    this.areCoinsLoaded = new ReactiveVar(false);
-    let template = this;
-
-    Meteor.call("getCoinsList", 'https://www.cryptocompare.com/api/data/coinlist/', function (e, response) {
-        if (e) {
-            console.log('Error: ' + e);
-        } else {
-            allCoins = JSON.stringify(response.data);
-            template.areCoinsLoaded.set(true);
-        }
-    });
-});
+Meteor.subscribe('allCoins');
 
 Template.addCoin.helpers({
-    showAutocomplete: function() {
-        return Template.instance().areCoinsLoaded.get();
-    },
     settings: function () {
+        console.log(AllCoins);
         return {
             position: "top",
-            rules: [{
-                collection: allCoins,
-                field: "name"
-            }]
+            limit: 5,
+            rules: [
+                {
+                    collection: AllCoins,
+                    field: "FullName",
+                    template: Template.coinSearchResult,
+                }
+            ]
         };
     }
 });
 
 Template.addCoin.events({
     "autocompleteselect input": function (event, template, doc) {
-        //console.log("selected ", doc);
+        console.log("selected ", doc);//
     }
 });
